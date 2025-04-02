@@ -1,22 +1,22 @@
-// import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-// Given("que estou na página inicial", () => {
-//   cy.visit("https://paciente.lacreisaude.com.br/");
-// });
 
-// When("eu clico na opção de busca de profissional", () => {
-//   cy.contains("Buscar Profissional").click();
-// });
+When("eu clico na opção de busca de profissional", () => {
+  cy.get("#email").type('riyica7103@deenur.com');
+  cy.get("#password").type('Test@123');
+  cy.get("#entrar").click();
+  cy.url().should("eq", "https://paciente-staging.lacreisaude.com.br/buscar-profissional/");  
+});
 
-// When("eu informo a especialidade {string}", (especialidade) => {
-//   cy.get("#campo-especialidade").type(especialidade);
-// });
+When("eu informo a especialidade {string}", (especialidade) => {
+  cy.get('#search').type(especialidade);
+});
 
-// When("clico no botão de buscar", () => {
-//   cy.contains("Buscar").click();
-// });
+When("clico no botão de buscar", () => {
+  cy.get('#pesquisar').click();
+});
 
-// Then("vejo a lista de profissionais disponíveis", () => {
-//   cy.get(".lista-profissionais").should("be.visible");
-// });
+Then("vejo a lista de profissionais disponíveis", () => {
+  cy.get('#main-section-div').should("be.visible");
+});
 

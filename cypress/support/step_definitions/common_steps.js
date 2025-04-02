@@ -1,5 +1,5 @@
 import { Given } from "@badeball/cypress-cucumber-preprocessor";
 
-Given("que o usuário acessa o sistema", () => {
+Given("que estou na página inicial", () => {
   cy.visit("https://paciente-staging.lacreisaude.com.br/");
 });

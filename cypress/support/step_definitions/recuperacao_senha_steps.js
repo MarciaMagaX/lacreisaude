@@ -1,20 +1,19 @@
-// Given("que estou na tela de login", () => {
-//   cy.visit("https://paciente.lacreisaude.com.br/login");
-// });
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-// When("clico em Esqueci minha senha", () => {
-//   cy.contains("Esqueci minha senha").click();
-// });
 
-// When("informo o email {string}", (email) => {
-//   cy.get("#email").type(email);
-// });
+When("clico em Esqueci minha senha", () => {
+  cy.contains("Esqueci minha senha").click();
+});
 
-// When("clico no botão de enviar", () => {
-//   cy.contains("Enviar").click();
-// });
+When("informo o email {string}", (email) => {
+  cy.get("#email").type(email);
+});
 
-// Then("vejo a mensagem de recuperação {string}", (mensagem) => {
-//   cy.contains(mensagem).should("be.visible");
-// });
+When("clico no botão de enviar", () => {
+  cy.contains("Enviar").click();
+});
+
+Then("vejo a mensagem de recuperação {string}", (mensagem) => {
+  cy.contains(mensagem).should("be.visible");
+});
 

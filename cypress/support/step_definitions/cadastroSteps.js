@@ -1,9 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
-Given("que estou na página inicial", () => {
-  cy.visit("https://paciente-staging.lacreisaude.com.br/");
-});
 
 When("eu preencho os campos obrigatórios e clico em cadastrar", () => {
   cy.get('#criar-conta').click()
